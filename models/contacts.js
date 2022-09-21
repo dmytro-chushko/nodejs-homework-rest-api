@@ -1,14 +1,29 @@
-// const fs = require('fs/promises')
+const fs = require('fs/promises');
+const path = require('path');
 
-const listContacts = async () => {}
+const contactsPath = path.join(__dirname, 'contacts.json');
 
-const getContactById = async (contactId) => {}
+const listContacts = async () => {
+  const data = await fs.readFile(contactsPath);
+  const contacts = JSON.parse(data);
+  return contacts;
+};
 
-const removeContact = async (contactId) => {}
+const getContactById = async contactId => {
+  const contacts = await listContacts();
+  const contactById = contacts.find(item => item.id === contactId);
+  if (!contactById) {
+    console.log(`There is no item with id: ${contactId}`);
+    return null;
+  }
+  return contactById;
+};
 
-const addContact = async (body) => {}
+const removeContact = async contactId => {};
 
-const updateContact = async (contactId, body) => {}
+const addContact = async body => {};
+
+const updateContact = async (contactId, body) => {};
 
 module.exports = {
   listContacts,
@@ -16,4 +31,4 @@ module.exports = {
   removeContact,
   addContact,
   updateContact,
-}
+};
