@@ -1,12 +1,22 @@
 [
-  { "id": "2", "name": "Jhon", "email": "jhon@jhon.com", "phone": "+380655555555" },
+  {
+    "id": "2",
+    "name": "Jhon",
+    "email": "jhon@jhon.com",
+    "phone": "+380655555555"
+  },
   {
     "id": "3",
     "name": "Kennedy Lane",
     "email": "mattis.Cras@nonenimMauris.net",
     "phone": "(542) 451-7038"
   },
-  { "id": "4", "name": "Wylie Pope", "email": "est@utquamvel.net", "phone": "(692) 802-2949" },
+  {
+    "id": "4",
+    "name": "Wylie Pope",
+    "email": "est@utquamvel.net",
+    "phone": "(692) 802-2949"
+  },
   {
     "id": "5",
     "name": "Cyrus Jackson",
@@ -31,7 +41,12 @@
     "email": "dui.Fusce.diam@Donec.com",
     "phone": "(233) 738-2360"
   },
-  { "id": "9", "name": "Thomas Lucas", "email": "nec@Nulla.com", "phone": "(704) 398-7993" },
+  {
+    "id": "9",
+    "name": "Thomas Lucas",
+    "email": "nec@Nulla.com",
+    "phone": "(704) 398-7993"
+  },
   {
     "id": "10",
     "name": "Alec Howard",
