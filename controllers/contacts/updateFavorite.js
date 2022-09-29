@@ -1,13 +1,14 @@
 const { Contact } = require('../../models');
 const { NotFound, BadRequest } = require('http-errors');
 
-const updateContact = async (req, res) => {
+const updateFavorite = async (req, res) => {
   const { contactId } = req.params;
+  const { favorite } = req.body;
 
   if (Object.keys(req.body).length === 0) {
     throw new BadRequest('missing fields');
   }
-  const updatedContact = await Contact.findByIdAndUpdate(contactId, req.body, { new: true });
+  const updatedContact = await Contact.findByIdAndUpdate(contactId, { favorite }, { new: true });
   if (!updatedContact) {
     throw new NotFound(`Contact whith id = ${contactId} not found`);
   }
@@ -18,4 +19,4 @@ const updateContact = async (req, res) => {
   });
 };
 
-module.exports = updateContact;
+module.exports = updateFavorite;
