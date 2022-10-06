@@ -39,12 +39,16 @@ userSchema.post('save', (error, data, next) => {
 const joiSignupSchema = Joi.object({
   password: Joi.string().required(),
   email: Joi.string().required(),
-  substring: Joi.string(),
+  substrcription: Joi.string(),
 });
 
 const joiLoginSchema = Joi.object({
   password: Joi.string().required(),
   email: Joi.string().required(),
+});
+
+const joiSubscriprtion = Joi.object({
+  subscription: Joi.string().valid('starter', 'pro', 'business').required(),
 });
 
 const User = model('user', userSchema);
@@ -53,4 +57,5 @@ module.exports = {
   User,
   joiSignupSchema,
   joiLoginSchema,
+  joiSubscriprtion,
 };
