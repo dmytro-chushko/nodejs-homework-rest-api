@@ -6,7 +6,7 @@ const listContacts = async (req, res) => {
   const skip = (page - 1) * limit;
   const contacts = await Contact.find(favorite ? { owner: _id, favorite } : { owner: _id }, '', {
     skip,
-    limit: +limit,
+    limit,
   }).populate('owner', '_id subscription email');
   res.json({
     status: 'success',
