@@ -22,6 +22,7 @@ const contactSchema = Schema(
       ref: 'user',
       required: true,
     },
+    
   },
   { versionKey: false, timestamps: true }
 );

@@ -15,4 +15,5 @@ router.patch(
   validation(joiSubscriprtion),
   ctrlWrapper(ctrl.changeSubscription)
 );
+router.patch('/avatars', auth, ctrlWrapper(ctrl.updateAvatar));
 module.exports = router;
